@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FluxMath</title>
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Vanilla CSS File -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Glowing Animated Background Blobs -->
+  <div class="blob-wrapper">
+    <div class="blob blob-indigo"></div>
+    <div class="blob blob-cyan"></div>
+    <div class="blob blob-violet"></div>
+  </div>
+
+  <!-- Calculator Container -->
+  <main class="calc-card">
+    
+    <!-- Top Gradient Line -->
+    <div class="top-gradient-bar"></div>
+
+    <!-- Header Section -->
+    <header class="calc-header">
+      <div class="brand">
+        <div class="logo-box">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <div class="title-group">
+          <h1>Flux<span>Math</span></h1>
+          <p>দ্রুত ও নির্ভুল ক্যালকুলেশন</p>
+        </div>
+      </div>
+      <div class="badge">
+        <span class="badge-dot"></span> Active
+      </div>
+    </header>
+
+    <!-- Output Display Panel -->
+    <section class="output-panel">
+      <div class="output-label">ফলাফল (Output)</div>
+      <div id="out" class="output-value text-default">= 0</div>
+    </section>
+
+    <!-- Calculator Inputs -->
+    <form id="calcForm" onsubmit="return false;" class="calc-form">
+      
+      <!-- Input Group: First Number -->
+      <div class="form-group">
+        <label for="a">প্রথম সংখ্যা (Number A)</label>
+        <div class="input-wrapper">
+          <input type="number" step="any" id="a" placeholder="যেমন: 12.5" autocomplete="off" />
+          <span class="input-suffix">A</span>
+        </div>
+      </div>
+
+      <!-- Select Group: Operator -->
+      <div class="form-group">
+        <label for="op">অপারেশন (Operator)</label>
+        <div class="select-wrapper">
+          <select id="op">
+            <option value="+">+ &nbsp; যোগ (Addition)</option>
+            <option value="-">- &nbsp; বিয়োগ (Subtraction)</option>
+            <option value="*">× &nbsp; গুণ (Multiplication)</option>
+            <option value="/">÷ &nbsp; ভাগ (Division)</option>
+          </select>
+          <div class="select-arrow">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Group: Second Number -->
+      <div class="form-group">
+        <label for="b">দ্বিতীয় সংখ্যা (Number B)</label>
+        <div class="input-wrapper">
+          <input type="number" step="any" id="b" placeholder="যেমন: 5" autocomplete="off" />
+          <span class="input-suffix">B</span>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <button type="button" id="go" class="submit-btn">
+        <span>গণনা করুন</span>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </button>
+
+    </form>
+
+    <!-- Footer Note -->
+    <footer class="calc-footer">
+      <span>শর্টকাট: <kbd>Enter</kbd></span>
+      <span>JS Functional Architecture</span>
+    </footer>
+
+  </main>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
